@@ -1,17 +1,28 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
-public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+class GFG
+{
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+    // Function to check if they are identical
+    static void idstrt(double a1, double b1,
+                       double c1, double a2,
+                       double b2, double c2)
+    {
+        if ((a1 / a2 == b1 / b2)
+                && (a1 / a2 == c1 / c2)
+                && (b1 / b2 == c1 / c2))
+            System.out.println( "The given straight"
+                    +" lines are identical");
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        else
+            System.out.println("The given straight"
+                    + " lines are not identical");
+    }
+
+    // Driver Code
+    public static void main(String[] args)
+    {
+        double a1 = -2, b1 = 4,
+                c1 = 3, a2 = -6,
+                b2 = 12, c2 = 9;
+        idstrt(a1, b1, c1, a2, b2, c2);
     }
 }
